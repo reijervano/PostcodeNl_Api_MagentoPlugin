@@ -371,7 +371,8 @@ document.observe("dom:loaded", PCNL_START_FUNCTION = function()
 				if (PCNLAPI_CONFIG.useStreet2AsHouseNumber && $(prefix + street2))
 				{
 					$(prefix + street1).setValue((data.street).trim());
-					$(prefix + street2).setValue((data.houseNumber +' '+ (data.houseNumberAddition ? data.houseNumberAddition : housenumber_addition)).trim());
+					$(prefix + street2).setValue(data.houseNumber);
+					$(prefix + street3).setValue((data.houseNumberAddition ? data.houseNumberAddition : housenumber_addition));
 				}
 				else
 				{
